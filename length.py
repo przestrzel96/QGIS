@@ -1,4 +1,4 @@
-fn = 'C:/Users/dprzestrzelski/Downloads/Rysunek22.shp'
+fn = 'C:/Users/Rysunek22.shp'
 
 layer= iface.addVectorLayer(fn, '', 'ogr')
 pv = layer.dataProvider()
