@@ -6,7 +6,7 @@ pv.addAttributes([QgsField('len_test_m', QVariant.Double)])
 
 layer.updateFields()
 
-expression1 = QgsExpression('$length')
+expression1 = QgsExpression('round($length,3)')
 
 
 context= QgsExpressionContext()
