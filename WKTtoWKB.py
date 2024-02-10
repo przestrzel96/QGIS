@@ -1,4 +1,5 @@
-from PyQt5.QtCore import QVariant
+from PyQt5.QtCore import QVariant  # Importowanie niezbędnych modułów
+from qgis.core import QgsField, QgsFeature, QgsGeometry
 
 warstwa = iface.activeLayer()  # Wybór aktywnej warstwy: Pobieramy aktywną warstwę z interfejsu QGIS.
 zadanie = [f for f in warstwa.getFeatures()]  # Pobranie geometrii obiektów z warstwy: Przechodzimy przez wszystkie obiekty w warstwie i pobieramy ich geometrię.
