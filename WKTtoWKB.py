@@ -1,5 +1,29 @@
+"""
+Skrypt do przypisywania wartości Well-Known Binary, do kolumny 'WKB' na podstawie identyfikatora obiektu w warstwie QGIS.
+
+Autor: [DP]
+Data: [10-02-2024]
+
+Opis:
+Ten skrypt pobiera geometrię obiektów z wybranej warstwy w QGIS, generuje ich reprezentację w formie szesnastkowej WKB,
+a następnie przypisuje te wartości do nowej kolumny 'WKB' na podstawie identyfikatora obiektu (np. 'id').
+
+Wymagane biblioteki:
+- PyQt5.QtCore
+- qgis.core
+
+Instrukcja użytkowania:
+1. Uruchom QGIS.
+2. Wybierz warstwę, na której chcesz przeprowadzić operację.
+3. Uruchom ten skrypt w Pythonie w środowisku QGIS.
+
+Uwagi:
+- Przed uruchomieniem upewnij się, że wybrana warstwa zawiera kolumnę 'id' lub inną unikalną kolumnę identyfikacyjną.
+"""
+
 from PyQt5.QtCore import QVariant  # Importowanie niezbędnych modułów
 from qgis.core import QgsField, QgsFeature, QgsGeometry
+
 
 warstwa = iface.activeLayer()  # Wybór aktywnej warstwy: Pobieramy aktywną warstwę z interfejsu QGIS.
 zadanie = [f for f in warstwa.getFeatures()]  # Pobranie geometrii obiektów z warstwy: Przechodzimy przez wszystkie obiekty w warstwie i pobieramy ich geometrię.
