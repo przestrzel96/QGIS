@@ -5,7 +5,7 @@ Autor: [DP]
 Data: [10-02-2024]
 
 Opis:
-Ten skrypt pobiera geometrię obiektów z wybranej warstwy w QGIS, generuje ich reprezentację w formie szesnastkowej WKB,
+Ten skrypt pobiera geometrię obiektów z wybranej warstwy w QGIS, generuje ich reprezentację w formie Well-Known Binary,
 a następnie przypisuje te wartości do nowej kolumny 'WKB' na podstawie identyfikatora obiektu (np. 'id').
 
 Wymagane biblioteki:
