@@ -11,16 +11,16 @@ if 'dlugosc' not in warstwa.fields().names():
     warstwa.updateFields()
 
 # Tworzenie wyrażenia do obliczania długości
-expression = QgsExpression('round($length, 4)') #Obliczenie długości do 4 miejsc po przecinku
+expression = QgsExpression('round($length, 4)') #Obliczenie dlugosci do 4 miejsc po przecinku
 print(expression)
 context = QgsExpressionContext() 
 context.appendScopes(QgsExpressionContextUtils.globalProjectLayerScopes(warstwa))
 
-# Edytowanie warstwy i obliczanie długości
+# Edytowanie warstwy i obliczanie dlugosci
 with edit(warstwa):
     for f in warstwa.getFeatures():
         context.setFeature(f)
         dlugosc_m = expression.evaluate(context)
         f['dlugosc'] = dlugosc_m
-        print(dlugosc_m) #Wyświetlenie długości
-        warstwa.updateFeature(f) #Zaktualizowanie wartości
+        print(dlugosc_m) #Wyswietlenie dlugosci
+        warstwa.updateFeature(f) #Zaktualizowanie wartosci
