@@ -1,5 +1,5 @@
-from qgis.core import QgsField, QgsExpression, QgsExpressionContext, QgsExpressionContextUtils
-from qgis.gui import QgsMapCanvas
+from qgis.core import *
+from qgis.gui import *
 
 # Wybieranie aktywnej warstwy
 warstwa = iface.activeLayer()
