@@ -4,7 +4,7 @@ from qgis.gui import *
 # Wybieranie aktywnej warstwy
 warstwa = iface.activeLayer()
 
-# Sprawdzanie, czy istnieje kolumna 'długość', i dodawanie jej, jeśli nie istnieje
+# Sprawdzanie, czy istnieje kolumna 'długosc', i dodawanie jej, jeśli nie istnieje
 if 'długosc' not in warstwa.fields().names():
     pv = warstwa.dataProvider()
     pv.addAttributes([QgsField('długosc', QVariant.Double)])
