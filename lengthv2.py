@@ -12,7 +12,6 @@ layer.updateFields()
 # Tworzymy wyrażenie do obliczenia długości
 expression = QgsExpression('round($length, 4)')
 
-# Tworzymy kontekst wyrażenia
 context = QgsExpressionContext()
 context.appendScopes(QgsExpressionContextUtils.globalProjectLayerScopes(layer))
 
