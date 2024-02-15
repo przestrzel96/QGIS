@@ -22,5 +22,5 @@ with edit(warstwa):
         context.setFeature(f)
         dlugosc_m = expression.evaluate(context)
         f['dlugosc'] = dlugosc_m
-        print(dlugosc_m) #Wyświetlenie dlugosci
+        print(dlugosc_m) #Wyświetlenie długości
         warstwa.updateFeature(f) #Zaktualizowanie wartości
