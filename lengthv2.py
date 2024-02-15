@@ -1,7 +1,7 @@
 from qgis.core import QgsField, QgsExpression, QgsExpressionContext, QgsExpressionContextUtils
 from qgis.gui import QgsMapCanvas
 
-# Pobieranie aktywnej warstwy
+# Wybieranie aktywnej warstwy
 warstwa = iface.activeLayer()
 
 # Sprawdzanie, czy istnieje kolumna 'długość', i dodawanie jej, jeśli nie istnieje
